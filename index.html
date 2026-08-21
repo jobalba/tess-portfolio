@@ -4,13 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Tess | Virtual Assistant & Customer Support Specialist</title>
+  <title>Tess | Technical Virtual Assistant</title>
 
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -29,7 +33,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid #e8eaf0;
     }
 
     .logo {
@@ -41,7 +45,7 @@
     nav a {
       text-decoration: none;
       color: #333;
-      margin-left: 25px;
+      margin-left: 22px;
       font-size: 14px;
     }
 
@@ -55,7 +59,7 @@
     }
 
     .hero-content {
-      max-width: 1000px;
+      max-width: 1050px;
       margin: auto;
     }
 
@@ -68,16 +72,21 @@
     }
 
     h1 {
-      font-size: 55px;
-      line-height: 1.1;
+      font-size: 56px;
+      line-height: 1.08;
       margin: 18px 0;
-      max-width: 800px;
+      max-width: 900px;
+      letter-spacing: -1px;
+    }
+
+    .hero h1 span {
+      color: #635bff;
     }
 
     .hero p {
       font-size: 19px;
       color: #667085;
-      max-width: 750px;
+      max-width: 800px;
     }
 
     .buttons {
@@ -120,12 +129,8 @@
 
     .intro {
       color: #667085;
-      max-width: 750px;
+      max-width: 780px;
       margin-bottom: 35px;
-    }
-
-    .about {
-      background: #f7f8fc;
     }
 
     .about-box {
@@ -160,38 +165,87 @@
       font-size: 14px;
     }
 
+    .services {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .service {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      border: 1px solid #e8eaf0;
+    }
+
+    .service-icon {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .service h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .service p {
+      color: #667085;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .service ul {
+      padding-left: 18px;
+      color: #667085;
+      font-size: 14px;
+    }
+
+    .why {
+      background: #f0efff;
+    }
+
+    .why-box {
+      max-width: 850px;
+    }
+
+    .why-box p {
+      font-size: 18px;
+      margin-bottom: 18px;
+    }
+
     .skills {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
 
-    .skill {
+    .skill-box {
       background: white;
       padding: 25px;
       border-radius: 12px;
       border: 1px solid #e8eaf0;
     }
 
-    .skill h3 {
-      margin-bottom: 8px;
+    .skill-box h3 {
+      margin-bottom: 12px;
     }
 
-    .skill p {
+    .skill-box ul {
+      padding-left: 18px;
       color: #667085;
       font-size: 14px;
     }
 
     .projects {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
 
     .project {
       background: white;
-      padding: 28px;
-      border-radius: 12px;
+      padding: 30px;
+      border-radius: 14px;
       border: 1px solid #e8eaf0;
     }
 
@@ -200,6 +254,7 @@
       font-size: 12px;
       font-weight: bold;
       margin-bottom: 10px;
+      text-transform: uppercase;
     }
 
     .project h3 {
@@ -207,6 +262,13 @@
     }
 
     .project p {
+      color: #667085;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .project-list {
+      padding-left: 18px;
       color: #667085;
       font-size: 14px;
     }
@@ -226,15 +288,50 @@
       font-size: 14px;
     }
 
-    .experience {
+    .learning {
       background: #f7f8fc;
     }
 
-    .experience-item {
+    .learning-box {
       background: white;
+      padding: 35px;
+      border-radius: 15px;
+      border: 1px solid #e8eaf0;
+    }
+
+    .learning-box h3 {
+      margin-bottom: 10px;
+    }
+
+    .learning-box p {
+      color: #667085;
+    }
+
+    .learning-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .learning-tag {
+      background: #eef0ff;
+      color: #4f46c7;
+      padding: 8px 13px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .experience {
+      background: white;
+    }
+
+    .experience-item {
       padding: 28px;
       margin-bottom: 18px;
       border-left: 4px solid #635bff;
+      background: #f7f8fc;
       border-radius: 8px;
     }
 
@@ -245,7 +342,7 @@
     }
 
     .experience-item h3 {
-      margin: 5px 0;
+      margin: 5px 0 8px;
     }
 
     .experience-item p {
@@ -286,6 +383,7 @@
       }
 
       .stats,
+      .services,
       .skills,
       .projects {
         grid-template-columns: 1fr;
@@ -298,24 +396,35 @@
       .hero {
         padding: 65px 6%;
       }
+
+      .contact {
+        padding: 35px 25px;
+      }
     }
   </style>
 </head>
 
+
 <body>
+
 
   <!-- NAVIGATION -->
 
   <nav>
-    <div class="logo">Tess.</div>
+
+    <div class="logo">
+      Tess.
+    </div>
 
     <div>
       <a href="#about">About</a>
+      <a href="#services">Services</a>
       <a href="#skills">Skills</a>
-      <a href="#work">Work</a>
+      <a href="#work">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </div>
+
   </nav>
 
 
@@ -326,17 +435,19 @@
     <div class="hero-content">
 
       <div class="tag">
-        Virtual Assistant • Customer Support • Digital Operations
+        Technical Virtual Assistant • Customer Support • Digital Operations
       </div>
 
       <h1>
-        Helping businesses stay organized, responsive, and moving forward.
+        Your <span>Technical Virtual Assistant</span> for smarter day-to-day operations.
       </h1>
 
       <p>
-        Hi, I'm Tess — a Computer Science graduate with 15+ years of
-        experience in Virtual Assistance and Digital Marketing, including
-        8+ years in Customer Support and Online Community Administration.
+        I help businesses manage technology, digital tools, customer support,
+        websites, e-commerce platforms, and everyday operations. With a
+        Computer Science background and 15+ years of experience in virtual
+        assistance and digital marketing, I bring both technical problem-solving
+        and dependable business support.
       </p>
 
       <div class="buttons">
@@ -346,7 +457,7 @@
         </a>
 
         <a href="#work" class="button secondary">
-          View My Work
+          View My Projects
         </a>
 
       </div>
@@ -358,7 +469,7 @@
 
   <!-- ABOUT -->
 
-  <section id="about" class="about">
+  <section id="about">
 
     <div class="container">
 
@@ -367,33 +478,34 @@
       <div class="about-box">
 
         <p>
-          I started my career in programming and later transitioned into
-          customer support, virtual assistance, and digital operations.
+          My career started in programming and later evolved into customer
+          support, virtual assistance, digital marketing, and online business
+          operations.
         </p>
 
         <br>
 
         <p>
-          My technical background helps me understand systems and
-          troubleshoot problems, while my customer support experience has
-          taught me how to communicate clearly, patiently, and professionally.
+          My Computer Science background gives me a strong technical foundation
+          and a logical approach to problem-solving. At the same time, my years
+          of customer support experience have taught me how to communicate
+          clearly, patiently, and professionally.
         </p>
 
         <br>
 
         <p>
-          I have worked with businesses and online communities in areas such
-          as customer support, administration, e-commerce, social media,
-          website management, and digital marketing.
+          I have supported businesses using a variety of websites, e-commerce
+          platforms, communication tools, productivity systems, accounting
+          software, and social media platforms.
         </p>
 
         <br>
 
         <p>
-          I'm also comfortable learning new platforms and workflows quickly.
-          While I haven't used every tool a company may require, I bring a
-          strong technical foundation and a proven ability to learn new
-          systems.
+          I am particularly interested in Technical Virtual Assistant roles
+          where I can combine technology, customer support, administration,
+          troubleshooting, and digital operations.
         </p>
 
       </div>
@@ -403,12 +515,12 @@
 
         <div class="stat">
           <strong>15+</strong>
-          <span>Years of Virtual Assistance & Digital Marketing</span>
+          <span>Years in Virtual Assistance & Digital Marketing</span>
         </div>
 
         <div class="stat">
           <strong>8+</strong>
-          <span>Years of Customer Support</span>
+          <span>Years in Customer Support</span>
         </div>
 
         <div class="stat">
@@ -417,9 +529,200 @@
         </div>
 
         <div class="stat">
-          <strong>24h</strong>
-          <span>Customer Inquiry Response Target</span>
+          <strong>CS</strong>
+          <span>Computer Science Graduate</span>
         </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- TECHNICAL VA SERVICES -->
+
+  <section id="services">
+
+    <div class="container">
+
+      <h2>Technical VA Services</h2>
+
+      <p class="intro">
+        I combine technical knowledge with hands-on business support to help
+        teams stay productive and organized.
+      </p>
+
+
+      <div class="services">
+
+
+        <div class="service">
+
+          <div class="service-icon">🔧</div>
+
+          <h3>Technical Troubleshooting</h3>
+
+          <p>
+            Helping identify and resolve common technical and platform-related
+            issues.
+          </p>
+
+          <ul>
+            <li>Basic website troubleshooting</li>
+            <li>Browser and software troubleshooting</li>
+            <li>Account and access issues</li>
+            <li>Technical issue documentation</li>
+            <li>Escalating complex problems when necessary</li>
+          </ul>
+
+        </div>
+
+
+        <div class="service">
+
+          <div class="service-icon">🌐</div>
+
+          <h3>Website & E-commerce Support</h3>
+
+          <p>
+            Supporting online businesses with website and e-commerce tasks.
+          </p>
+
+          <ul>
+            <li>WordPress support</li>
+            <li>Shopify support</li>
+            <li>Website content updates</li>
+            <li>Amazon Seller Central support</li>
+            <li>Online store administration</li>
+          </ul>
+
+        </div>
+
+
+        <div class="service">
+
+          <div class="service-icon">⚙️</div>
+
+          <h3>Business Tools & Systems</h3>
+
+          <p>
+            Managing and working across multiple business applications.
+          </p>
+
+          <ul>
+            <li>Google Workspace</li>
+            <li>Slack</li>
+            <li>Asana</li>
+            <li>Harvest</li>
+            <li>Microsoft Office</li>
+          </ul>
+
+        </div>
+
+
+        <div class="service">
+
+          <div class="service-icon">💬</div>
+
+          <h3>Customer & Community Support</h3>
+
+          <p>
+            Combining technical understanding with customer-focused
+            communication.
+          </p>
+
+          <ul>
+            <li>Email support</li>
+            <li>Customer inquiry management</li>
+            <li>Issue resolution</li>
+            <li>Forum administration</li>
+            <li>Online community management</li>
+          </ul>
+
+        </div>
+
+
+        <div class="service">
+
+          <div class="service-icon">📋</div>
+
+          <h3>Digital Operations</h3>
+
+          <p>
+            Helping businesses keep their daily digital operations organized.
+          </p>
+
+          <ul>
+            <li>Task and workflow management</li>
+            <li>Documentation</li>
+            <li>Data organization</li>
+            <li>Administrative support</li>
+            <li>Process coordination</li>
+          </ul>
+
+        </div>
+
+
+        <div class="service">
+
+          <div class="service-icon">📱</div>
+
+          <h3>Digital Marketing Support</h3>
+
+          <p>
+            Supporting digital marketing activities and online presence.
+          </p>
+
+          <ul>
+            <li>Social media management</li>
+            <li>Content coordination</li>
+            <li>Community engagement</li>
+            <li>Hootsuite</li>
+            <li>Canva</li>
+          </ul>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHY TECHNICAL VA -->
+
+  <section class="why">
+
+    <div class="container">
+
+      <div class="why-box">
+
+        <h2>More Than Administrative Support</h2>
+
+        <p>
+          I don't just complete tasks — I understand the technology behind
+          them.
+        </p>
+
+        <p>
+          My Computer Science background and programming experience allow me
+          to approach problems logically, troubleshoot issues, learn unfamiliar
+          software quickly, and understand how different digital systems work.
+        </p>
+
+        <p>
+          Combined with years of customer support and virtual assistance
+          experience, this allows me to communicate effectively with both
+          customers and internal teams.
+        </p>
+
+        <p>
+          My goal is simple: <strong>make your day-to-day operations easier,
+          more organized, and more efficient.</strong>
+        </p>
 
       </div>
 
@@ -434,68 +737,64 @@
 
     <div class="container">
 
-      <h2>What I Can Help With</h2>
+      <h2>Technical & Professional Skills</h2>
 
       <p class="intro">
-        I provide reliable remote support across customer service,
-        administration, digital marketing, e-commerce, and online operations.
+        A combination of technical knowledge, business support, and
+        customer-facing skills.
       </p>
 
 
       <div class="skills">
 
-        <div class="skill">
+
+        <div class="skill-box">
+
+          <h3>Technical</h3>
+
+          <ul>
+            <li>Computer Science</li>
+            <li>Programming background</li>
+            <li>Technical troubleshooting</li>
+            <li>Website management</li>
+            <li>Software & platform support</li>
+            <li>Technical problem-solving</li>
+          </ul>
+
+        </div>
+
+
+        <div class="skill-box">
+
+          <h3>Business & Operations</h3>
+
+          <ul>
+            <li>Virtual Assistance</li>
+            <li>Digital Operations</li>
+            <li>Administrative Support</li>
+            <li>Digital Marketing</li>
+            <li>E-commerce Support</li>
+            <li>Process Documentation</li>
+          </ul>
+
+        </div>
+
+
+        <div class="skill-box">
+
           <h3>Customer Support</h3>
-          <p>
-            Handling customer inquiries, troubleshooting concerns,
-            follow-ups, email support, and issue resolution.
-          </p>
+
+          <ul>
+            <li>Email Support</li>
+            <li>Customer Service</li>
+            <li>Issue Resolution</li>
+            <li>Problem Solving</li>
+            <li>Community Management</li>
+            <li>Forum Administration</li>
+          </ul>
+
         </div>
 
-
-        <div class="skill">
-          <h3>Virtual Assistance</h3>
-          <p>
-            Administrative support, research, documentation, data
-            organization, scheduling, and day-to-day business assistance.
-          </p>
-        </div>
-
-
-        <div class="skill">
-          <h3>Community Management</h3>
-          <p>
-            Supporting online communities, answering member questions,
-            moderating discussions, and maintaining engagement.
-          </p>
-        </div>
-
-
-        <div class="skill">
-          <h3>Website Management</h3>
-          <p>
-            Experience working with WordPress, Shopify, website content,
-            and online business platforms.
-          </p>
-        </div>
-
-
-        <div class="skill">
-          <h3>E-commerce Support</h3>
-          <p>
-            Experience with Shopify and Amazon Seller Central and
-            supporting digital commerce operations.
-          </p>
-        </div>
-
-
-        <div class="skill">
-          <h3>Social Media</h3>
-          <p>
-            Social media management, community engagement, content
-            coordination, and digital marketing support.
-          </p>
-        </div>
 
       </div>
 
@@ -504,17 +803,17 @@
   </section>
 
 
-  <!-- WORK -->
+  <!-- PROJECTS -->
 
-  <section id="work" class="about">
+  <section id="work">
 
     <div class="container">
 
-      <h2>Selected Work</h2>
+      <h2>Portfolio Projects</h2>
 
       <p class="intro">
-        Here are examples of the type of work and value I can bring to a
-        business.
+        Practical examples of the type of technical and operational work
+        I can support.
       </p>
 
 
@@ -524,18 +823,25 @@
         <div class="project">
 
           <div class="project-label">
-            COMMUNITY MANAGEMENT
+            CUSTOMER SUPPORT
           </div>
 
           <h3>
-            3,000+ Member Online Community
+            Customer Support Workflow
           </h3>
 
           <p>
-            Supported an online community of more than 3,000 members by
-            answering questions, resolving concerns, moderating discussions,
-            and helping maintain an organized and positive environment.
+            Sample workflow demonstrating how customer inquiries can be
+            organized, prioritized, responded to, and tracked.
           </p>
+
+          <ul class="project-list">
+            <li>Inquiry categorization</li>
+            <li>Priority identification</li>
+            <li>Response workflow</li>
+            <li>Follow-up tracking</li>
+            <li>Issue escalation</li>
+          </ul>
 
         </div>
 
@@ -543,18 +849,25 @@
         <div class="project">
 
           <div class="project-label">
-            CUSTOMER SUPPORT
+            TECHNICAL SUPPORT
           </div>
 
           <h3>
-            Customer Inquiry Management
+            Technical Troubleshooting Guide
           </h3>
 
           <p>
-            Managed customer inquiries with a focus on timely, accurate,
-            and professional communication, with a target of resolving
-            concerns within 24 hours.
+            A sample troubleshooting resource designed to help customers
+            resolve common technical issues before escalation.
           </p>
+
+          <ul class="project-list">
+            <li>Problem identification</li>
+            <li>Step-by-step troubleshooting</li>
+            <li>Common solutions</li>
+            <li>Documentation</li>
+            <li>Escalation process</li>
+          </ul>
 
         </div>
 
@@ -566,14 +879,102 @@
           </div>
 
           <h3>
-            Multi-Platform Business Support
+            Business Task Management
           </h3>
 
           <p>
-            Worked across multiple business tools and platforms including
-            WordPress, Shopify, Amazon Seller Central, Slack, Google Drive,
-            Canva, Asana, QuickBooks, Hootsuite, and Microsoft Office.
+            Sample digital workflow for organizing recurring administrative,
+            customer support, and operational tasks.
           </p>
+
+          <ul class="project-list">
+            <li>Task organization</li>
+            <li>Prioritization</li>
+            <li>Recurring tasks</li>
+            <li>Team coordination</li>
+            <li>Progress tracking</li>
+          </ul>
+
+        </div>
+
+
+        <div class="project">
+
+          <div class="project-label">
+            E-COMMERCE
+          </div>
+
+          <h3>
+            Online Store Support
+          </h3>
+
+          <p>
+            Demonstration of how I can support online businesses with
+            product information, customer inquiries, website content,
+            and operational tasks.
+          </p>
+
+          <ul class="project-list">
+            <li>Product information management</li>
+            <li>Customer support</li>
+            <li>Website updates</li>
+            <li>Order-related assistance</li>
+            <li>Administrative tasks</li>
+          </ul>
+
+        </div>
+
+
+        <div class="project">
+
+          <div class="project-label">
+            COMMUNITY
+          </div>
+
+          <h3>
+            3,000+ Member Online Community
+          </h3>
+
+          <p>
+            Supported an online community of more than 3,000 members by
+            answering questions, resolving concerns, moderating discussions,
+            and helping maintain an organized environment.
+          </p>
+
+          <ul class="project-list">
+            <li>Member support</li>
+            <li>Question answering</li>
+            <li>Issue resolution</li>
+            <li>Forum administration</li>
+            <li>Community engagement</li>
+          </ul>
+
+        </div>
+
+
+        <div class="project">
+
+          <div class="project-label">
+            DIGITAL MARKETING
+          </div>
+
+          <h3>
+            Social Media & Content Support
+          </h3>
+
+          <p>
+            Supporting online business presence through social media
+            management, content coordination, community engagement,
+            and digital marketing tasks.
+          </p>
+
+          <ul class="project-list">
+            <li>Social media support</li>
+            <li>Content coordination</li>
+            <li>Community engagement</li>
+            <li>Canva</li>
+            <li>Hootsuite</li>
+          </ul>
 
         </div>
 
@@ -594,8 +995,9 @@
       <h2>Tools & Platforms</h2>
 
       <p class="intro">
-        Platforms I've worked with throughout my career.
+        Platforms and software I have experience working with.
       </p>
+
 
       <div class="tools">
 
@@ -611,6 +1013,41 @@
         <span class="tool">Microsoft Office</span>
         <span class="tool">Harvest</span>
         <span class="tool">Saasu</span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CURRENTLY LEARNING -->
+
+  <section class="learning">
+
+    <div class="container">
+
+      <div class="learning-box">
+
+        <h2>Currently Expanding My Technical Toolkit</h2>
+
+        <p>
+          I continuously expand my knowledge of modern business technology,
+          automation, and productivity platforms. With my Computer Science
+          background and experience learning different business systems,
+          I am comfortable adapting to new tools and workflows.
+        </p>
+
+
+        <div class="learning-tags">
+
+          <span class="learning-tag">Zoho</span>
+          <span class="learning-tag">Zapier</span>
+          <span class="learning-tag">Workflow Automation</span>
+          <span class="learning-tag">AI Tools</span>
+          <span class="learning-tag">Business Systems</span>
+
+        </div>
 
       </div>
 
@@ -663,15 +1100,16 @@
 
       <div class="experience-item">
 
-        <span>EDUCATION</span>
+        <span>TECHNICAL FOUNDATION</span>
 
         <h3>
           Bachelor of Science in Computer Science
         </h3>
 
         <p>
-          A technical foundation that helps me understand software,
-          websites, systems, and business technology quickly.
+          My Computer Science education and programming background provide
+          the technical foundation behind my approach to troubleshooting,
+          systems, software, and digital tools.
         </p>
 
       </div>
@@ -693,15 +1131,18 @@
         <h2>Let's Work Together</h2>
 
         <p>
-          Looking for a dependable Virtual Assistant, Customer Support
-          Specialist, or Digital Operations professional?
+          Looking for a Technical Virtual Assistant who can handle both
+          business tasks and technology-related challenges?
         </p>
 
         <p>
-          I'd love to hear about your business and how I can help.
+          I'd love to hear about your business and discuss how I can help
+          simplify your day-to-day operations.
         </p>
 
         <br>
+
+        <!-- REPLACE THESE WITH YOUR REAL DETAILS -->
 
         <p>
           <strong>Email:</strong>
@@ -710,12 +1151,16 @@
 
         <p>
           <strong>LinkedIn:</strong>
-          <a href="#">https://www.linkedin.com/in/tessiejob/</a>
+          <a href="#">
+            https://www.linkedin.com/in/tessiejob/
+          </a>
         </p>
 
         <p>
           <strong>OnlineJobs.ph:</strong>
-          <a href="#">https://www.onlinejobs.ph/jobseekers/info/57023</a>
+          <a href="#">
+            https://www.onlinejobs.ph/jobseekers/info/57023
+          </a>
         </p>
 
       </div>
@@ -725,9 +1170,11 @@
   </section>
 
 
+  <!-- FOOTER -->
+
   <footer>
 
-    © 2026 Tess. Virtual Assistant & Customer Support Specialist.
+    © 2026 Tess | Technical Virtual Assistant
 
   </footer>
 
